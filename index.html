@@ -116,7 +116,7 @@ function renderSummary(){
   $("main").innerHTML=`<div class="sum">${rows}</div>${status==="submitted"?`<div class="done-box">Submitted. Your picks are saved.</div>`:""}${status==="submitted"?"":`<div class="state"><input id="who" placeholder="Your name" value="${esc(who)}" aria-label="Your name" style="font:inherit;padding:10px;border:2px solid var(--line);width:min(320px,100%)"> <button class="chip" id="copy">Copy summary</button>${sendErr?`<div role="status" style="margin-top:8px">${esc(sendErr)}</div>`:""}</div>`}`;
 }
 document.addEventListener("click",e=>{
-  if(e.__wk)return;e.__wk=1;const _n=Date.now();if(_n-(window.__lc||0)<250)return;window.__lc=_n;
+  if(e.__wk)return;e.__wk=1;
   const t=e.target.closest(".today img");
   if(t){$("lbimg").src=t.src;$("lb").classList.add("on");return}
   const z=e.target.closest("[data-zoom]");
